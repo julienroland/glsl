@@ -1005,7 +1005,7 @@ float map( vec3 p )
     float r;
     float c;
     r = 0.5;
-    h = fBox(p, vec3(0.2,1.1,0.3));
+    h = pModPolar(p.xy,fBox(p, vec3(1.2,0.3,2.1)));
     c = fCircle(p, 0.3);
     h = abs( tan(p.x + fOpDifferenceRound(h, c,2.8)) / sin(p.x *10.1) * 3.0*PI);
     h = pow(h, 15.0);
