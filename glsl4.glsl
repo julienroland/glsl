@@ -1001,14 +1001,13 @@ float lerp(float a, float b, float w)
 
 float map( vec3 p )
 {
-    float h;
+    float h;s
     float r;
     float c;
     r = 0.5;
-    h = pModPolar(p.xy,fBox(p, vec3(1.2,0.3,exp(iGlobalTime)))));
-    c = fCircle(p, 0.3);
+    h = pModPolar(p.xy,fBox(p, vec3(1.2,0.3,exp(iGlobalTime)/ 2.0)));
     h = pow(log(p.x), 1.5);
-    h = pow(h, 15.0);
+    h = pow(h, 3.0);
     return h;
 }
 
